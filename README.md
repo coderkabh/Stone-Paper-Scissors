@@ -14,4 +14,4 @@ I'll be uploading its new versions in upcoming days with some new features.
   #### 1. Added Reset button
   #### 2. Added a border for interactive UI
   
- # We are sorry but out game still lacks in phone's aspect ratio.
+ # We are sorry but our game still lacks for phone's aspect ratio.(Will be adding in stable version).
