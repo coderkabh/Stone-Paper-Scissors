@@ -11,7 +11,8 @@ I'll be uploading its new versions in upcoming days with some new features.
   
   
 ## Change Log v1.1.0:
-  #### 1. Added Reset button
-  #### 2. Added a border for interactive UI
+  #### 1. [Added] Reset button(curently it will only reload page)
+  #### 2. [Added] A border for interactive UI
+  #### 3. [Fixed] Aspect ratio problem for few devices.
   
  # We are sorry but our game still lacks for phone's aspect ratio.(Will be adding in stable version).
