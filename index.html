@@ -31,6 +31,7 @@
         </div>
     
         <script>
+             var clickedval=0;
     
             var clickedval= document.getElementById("seltag").value;
                     document.getElementById("lock").onclick=function(){
@@ -44,7 +45,7 @@
                       
                         if(clickedval!=0){
                       
-                        if(clickedval==compinput){
+                            if(clickedval==compinput){
           
                          
                              document.getElementById('para').innerHTML="You both have chosen the same.";
