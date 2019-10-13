@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stone Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+   
+</head>
+    
+<body >    
+    <div class="MainBody">
+        <div id="gamearea">
+        <select id="seltag"> 
+            <option id="SelBtn" value="0">Select choice</option>
+            <option id="SelBtn" value="1">Stone</option>
+            <option id="SelBtn" value="2">Paper</option>
+            <option id="SelBtn" value="3">Scissors</option>
+        </select>
+        <button id="lock">Wanna Lock your answer?</button>
+        
+        <button id="Reset" onclick="window.location.reload()">Reset Scores</button>
+        <br><br>
+        <p id="para">Choose an option</p>
+
+        <p id="scoreheading"> Scores</p>
+
+
+        <div id="selscores">
+        <p id="sels">Your:-</p>
+        <p id="selscoreval"> 0</p>
+         </div>
+
+        <div id="compscores">
+            <p id="comps">Computer</p>
+            <p id="compscoreval"> 0</p>
+        </div>
+        </div>
+    
+        <script>
+		var CompCounter=0;
+                        var SelCounter=0;
+    
+            var clickedval= document.getElementById("seltag").value;
+                    document.getElementById("lock").onclick=function(){
+                        clickedval=parseInt( document.getElementById("seltag").value);
+                        
+        
+                    // This is to choose value from computer
+                    //---------------------------------------------------------
+                        var compinput=parseInt( Math.floor(Math.random()*3)+1);
+        
+                      
+                        if(clickedval!=0){
+                      
+                        if(clickedval==compinput){
+          
+                         
+                             document.getElementById('para').innerHTML="You both have chosen the same.";
+                         }
+                        else if(compinput==1 && clickedval==2){
+                        
+                            document.getElementById('para').innerHTML="You have won the game because computer have chosen Stone.";
+                            SelCounter++;
+                        }
+                        else if(compinput==1 && clickedval==3){
+                         
+                            document.getElementById('para').innerHTML="You have lost the game because computer have chosen Stone.";
+                            CompCounter++;
+                        }
+                         else if(compinput==2 && clickedval==3){
+                         
+                             document.getElementById('para').innerHTML="You have won the game because computer have chosen Paper.";
+                             SelCounter++;
+                         }
+                         else if(compinput==2 && clickedval==1){
+                        
+                            document.getElementById('para').innerHTML="You have lost the game because  computer have chosen Paper.";
+                            CompCounter++;
+                        }
+                        else if(compinput==3 && clickedval==1){
+                         
+                            document.getElementById('para').innerHTML="You have won the game because computer have chosen Scissors.";
+                            SelCounter++;
+                        }
+                        else if(compinput==3 && clickedval==2){
+                        
+                            document.getElementById('para').innerHTML="You have lost the game because computer have chosen Scissors.";
+                            CompCounter++;
+                        }
+                    
+        
+                         else{
+                        document.getElementById('para').innerHTML="You cheated! Select atlest one choice from the list";
+                        }
+                    
+                        if(CompCounter!=0)
+                        document.getElementById('compscoreval').innerHTML=CompCounter;
+        
+                        if(SelCounter!=0)
+                        document.getElementById('selscoreval').innerHTML=SelCounter;
+                        }
+                    }
+        
+                     
+                    
+                
+            
+            </script>
+</body>
+</html>
